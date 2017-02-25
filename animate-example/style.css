@@ -10,14 +10,12 @@
 .page h1    { font-size:60px; }
 .page a     { margin-top:50px; }
 
-/* Sayfalar (her sayfa için farklı renk)
-============================================================================= */
+/* Sayfalar (her sayfa için farklı renk) */
 .page-home      { background:#00D0BC; color:#00907c; }
 .page-about     { background:#E59400; color:#a55400; }
 .page-contact   { background:#ffa6bb; color:#9e0000; }
 
-/* ANIMATIONS
-============================================================================= */
+/* ANIMATIONS */
 /* Döndürme ve Düşürme */
 @keyframes rotateFall {
     0%      { transform: rotateZ(0deg); }
@@ -57,14 +55,14 @@
 
 /* Sayfalar için farklı animasyonlar */
 
-/* home -------------------------- */
+/* home */
 .page-home.ng-enter         { animation: scaleUp 0.5s both ease-in; }
 .page-home.ng-leave         { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }
 
-/* about ------------------------ */
+/* about */
 .page-about.ng-enter        { animation:slideInRight 0.5s both ease-in; }
 .page-about.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
 
-/* contact ---------------------- */
+/* contact */
 .page-contact.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
 .page-contact.ng-enter      { animation:slideInUp 0.5s both ease-in; }
