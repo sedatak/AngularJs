@@ -1,0 +1,21 @@
+<div>
+    <div ng-controller="getUserInfo">
+        <div class="well text-center">
+            <h3> Github Kullanıcı Sorgulama</h3>
+            <form ng-submit="getGithubUser()">
+                Github Kullanıcı Adı: <input type="text" ng-model="userName" />
+            </form>
+        </div>
+        <div ng-show="error" class="error">
+            {{ error }}
+        </div>
+        <div ng-show="user.name">
+            <div class="container text-center">
+                <img src="{{ user.avatar_url }}" class="img-circle" alt="" width="350" height="350" title="{{ user.name }}" /><br />
+                Ad: {{ user.name }}<br />
+                E-posta: {{ user.email }}<br />
+                Lokasyon: {{ user.location }}
+            </div>
+        </div>
+    </div>
+</div>

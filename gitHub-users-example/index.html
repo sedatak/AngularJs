@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="githubApp">
+    <head>
+        <title>GitHub Kullanıcı</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        
+        <!-- AngularJs -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+        <script src="script.js"></script>
+        <style type="text/css">
+            .error {
+                  border: 6px solid darkred;
+                  color: darkred;
+                  padding: 14px;
+            }
+        </style>
+    </head>
+    <body ng-controller="mainController">
+        <!-- Header & Navbar -->
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">GitHub Kullanıcı</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><i class="fa fa-home"></i> Anasayfa</a></li>
+                        <li><a href="#repos"><i class="fa fa-shield"></i> Repo</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div id="main">
+            <div ng-view></div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div ng-controller="githubRepos">
+        <div class="well">
+            <form ng-submit="getGithubRepos()">
+                Github Kullanıcı Adı: <input type="text" ng-model="kullaniciadi" />
+            </form>
+        </div>
+        <div ng-show="error" class="error">
+            {{ error }}
+        </div>
+        <div ng-show="repos">
+            <div class="well">
+                Repoda Ara: <input type="text" ng-model="filtre" placeholder="" />
+            </div>
+            <ol>
+                <li ng-repeat="repo in repos | filter: {name: filtre}">
+                    {{ repo.name }}
+                    <div ng-show="repo.description" style="border: 1px solid #ddd; padding: 5px;">
+                        {{ repo.description }}
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
